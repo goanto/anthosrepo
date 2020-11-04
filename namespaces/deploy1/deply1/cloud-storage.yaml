@@ -36,7 +36,7 @@ spec:
       enableServiceLinks: false
       containers:
         - name: cloud-storage
-          image: docker.pkg.github.com/goanto/smartvino/smtc_storage_manager:latest
+          image: goanto/smtc_storage_manager:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
