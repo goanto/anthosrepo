@@ -36,7 +36,7 @@ spec:
       enableServiceLinks: false
       containers:
         - name: cloud-gateway
-          image: docker.pkg.github.com/goanto/smartvino/smtc_api_gateway:latest
+          image: goanto/smtc_api_gateway:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
