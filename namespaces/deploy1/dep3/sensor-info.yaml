@@ -1,0 +1,233 @@
+apiVersion: v1
+data:
+  sensor-info.json: "[{\n    \"scenario\": \"traffic\",\n    \"address\": \"Dawson
+    Creek\",\n    \"location\": {\n        \"lat\": 45.539626,\n        \"lon\": -122.929569\n
+    \   },\n    \"sensors\": [{\n        \"address\": \"Shute & Dawson Creek\",\n
+    \       \"location\": {\n            \"lat\": 45.544223,\n            \"lon\":
+    -122.926128\n        },\n        \"algorithm\": \"object-detection\",\n        \"mnth\":
+    75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n
+    \       \"theta\": 0.0,\n        \"simsn\": \"cams1o1c0\",\n        \"simfile\":
+    \"_traffic.mp4$\"\n    },{\n        \"address\": \"Brookwood & Dawson Creek\",\n
+    \       \"location\": {\n            \"lat\": 45.546249,\n            \"lon\":
+    -122.932145\n        },\n        \"algorithm\": \"object-detection\",\n        \"mnth\":
+    75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n
+    \       \"theta\": 115.0,\n        \"simsn\": \"cams1o1c1\",\n        \"simfile\":
+    \"_traffic.mp4$\"\n    },{\n        \"address\": \"Brookwood & Airport Rd\",\n
+    \       \"location\": {\n            \"lat\": 45.538971,\n            \"lon\":
+    -122.939726\n        },\n        \"algorithm\": \"object-detection\",\n        \"mnth\":
+    75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n
+    \       \"theta\": 225.0,\n        \"simsn\": \"cams1o1c2\",\n        \"simfile\":
+    \"_traffic.mp4$\"\n    },{\n        \"address\": \"Cornell & 48th Ave\",\n        \"location\":
+    {\n            \"lat\": 45.533498,\n            \"lon\": -122.933868\n        },\n
+    \       \"algorithm\": \"object-detection\",\n        \"mnth\": 75.0,\n        \"alpha\":
+    45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n        \"theta\": 280.0,\n
+    \       \"simsn\": \"cams1o1c3\",\n        \"simfile\": \"_traffic.mp4$\"\n    },{\n
+    \       \"address\": \"Shute & Butler St\",\n        \"location\": {\n            \"lat\":
+    45.538148,\n            \"lon\": -122.926131\n        },\n        \"algorithm\":
+    \"object-detection\",\n        \"mnth\": 75.0,\n        \"alpha\": 45.0,\n        \"fovh\":
+    90.0,\n        \"fovv\": 68.0,\n        \"theta\": 0.0,\n        \"simsn\": \"cams1o1c4\",\n
+    \       \"simfile\": \"_traffic.mp4$\"\n    },{\n        \"address\": \"Brookwood
+    & Library\",\n        \"location\": {\n            \"lat\": 45.54289,\n            \"lon\":
+    -122.93716\n        },\n        \"algorithm\": \"object-detection\",\n        \"mnth\":
+    75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n
+    \       \"theta\": 170.0,\n        \"simsn\": \"cams1o1c5\",\n        \"simfile\":
+    \"_traffic.mp4$\"\n    },{\n        \"address\": \"Cornell & Shute\",\n        \"location\":
+    {\n            \"lat\": 45.5335,\n            \"lon\": -122.9260\n        },\n
+    \       \"algorithm\": \"object-detection\",\n        \"mnth\": 75.0,\n        \"alpha\":
+    45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n        \"theta\": 270.0,\n
+    \       \"simsn\": \"cams1o1c6\",\n        \"simfile\": \"_traffic.mp4$\"\n    },{\n
+    \       \"address\": \"Tendem Way\",\n        \"location\": {\n            \"lat\":
+    45.5415,\n            \"lon\": -122.9227\n        },\n        \"algorithm\": \"object-detection\",\n
+    \       \"mnth\": 75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\":
+    68.0,\n        \"theta\": 0.0,\n        \"simsn\": \"cams1o1c7\",\n        \"simfile\":
+    \"_traffic.mp4$\"\n    },{\n        \"address\": \"Cornell and Brookwood\",\n
+    \       \"location\": {\n            \"lat\": 45.532718,\n            \"lon\":
+    -122.938067\n        },\n        \"algorithm\": \"object-detection\",\n        \"mnth\":
+    75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n
+    \       \"theta\": 45.0,\n        \"passcode\": \"admin:123456\",\n        \"ip\":
+    \"192.168.1.114\",\n        \"port\": [ 80, 9988 ],\n        \"device\": {\n            \"SerialNumber\":
+    \"031158077176194102\" \n        }\n    }]\n},{\n    \"scenario\": \"traffic\",\n
+    \   \"address\": \"Shady Wood\",\n    \"location\": {\n        \"lat\": 45.524460,\n
+    \       \"lon\": -122.960475\n    },\n    \"sensors\": [{\n        \"address\":
+    \"Brogden & 37th Ave\",\n        \"location\": {\n            \"lat\": 45.524295,\n
+    \           \"lon\": -122.944296\n        },\n        \"algorithm\": \"object-detection\",\n
+    \       \"mnth\": 75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\":
+    68.0,\n        \"theta\": 90.0,\n        \"simsn\": \"cams1o2c0\",\n        \"simfile\":
+    \"_traffic.mp4$\"\n    },{\n        \"address\": \"Veteran & 34th Ave\",\n        \"location\":
+    {\n            \"lat\": 45.528657,\n            \"lon\": -122.946688\n        },\n
+    \       \"algorithm\": \"object-detection\",\n        \"mnth\": 75.0,\n        \"alpha\":
+    45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n        \"theta\": 135.0,\n
+    \       \"simsn\": \"cams1o2c1\",\n        \"simfile\": \"_traffic.mp4$\"\n    },{\n
+    \       \"address\": \"Sunrise & 25th Ave\",\n        \"location\": {\n            \"lat\":
+    45.536660,\n            \"lon\": -122.957050\n        },\n        \"algorithm\":
+    \"object-detection\",\n        \"mnth\": 75.0,\n        \"alpha\": 45.0,\n        \"fovh\":
+    90.0,\n        \"fovv\": 68.0,\n        \"theta\": 180.0,\n        \"simsn\":
+    \"cams1o2c2\",\n        \"simfile\": \"_traffic.mp4$\"\n    },{\n        \"address\":
+    \"Cornell & 17th Ave\",\n        \"location\": {\n            \"lat\": 45.530704,\n
+    \           \"lon\": -122.964528\n        },\n        \"algorithm\": \"object-detection\",\n
+    \       \"mnth\": 75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\":
+    68.0,\n        \"theta\": 0.0,\n        \"simsn\": \"cams1o2c3\",\n        \"simfile\":
+    \"_traffic.mp4$\"\n    },{\n        \"address\": \"Grant & Delsey\",\n        \"location\":
+    {\n            \"lat\": 45.528238,\n            \"lon\": -122.974870\n        },\n
+    \       \"algorithm\": \"object-detection\",\n        \"mnth\": 75.0,\n        \"alpha\":
+    45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n        \"theta\": 225.0,\n
+    \       \"simsn\": \"cams1o2c4\",\n        \"simfile\": \"_traffic.mp4$\"\n    },{\n
+    \       \"address\": \"Cornell & Main St\",\n        \"location\": {\n            \"lat\":
+    45.5220,\n            \"lon\": -122.9738\n        },\n        \"algorithm\": \"object-detection\",\n
+    \       \"mnth\": 75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\":
+    68.0,\n        \"theta\": 0.0,\n        \"simsn\": \"cams1o2c5\",\n        \"simfile\":
+    \"_traffic.mp4$\"\n    },{\n        \"address\": \"Oak & 18th Ave\",\n        \"location\":
+    {\n            \"lat\": 45.5185,\n            \"lon\": -122.9640\n        },\n
+    \       \"algorithm\": \"object-detection\",\n        \"mnth\": 75.0,\n        \"alpha\":
+    45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n        \"theta\": 180.0,\n
+    \       \"simsn\": \"cams1o2c6\",\n        \"simfile\": \"_traffic.mp4$\"\n    },{\n
+    \       \"address\": \"Main & 28th Ave\",\n        \"location\": {\n            \"lat\":
+    45.5207,\n            \"lon\": -122.9545\n        },\n        \"algorithm\": \"object-detection\",\n
+    \       \"mnth\": 75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\":
+    68.0,\n        \"theta\": 75.0,\n        \"simsn\": \"cams1o2c7\",\n        \"simfile\":
+    \"_traffic.mp4$\"\n    }]\n},{\n    \"scenario\": \"traffic\",\n    \"address\":
+    \"Glencoe Tract\",\n    \"location\": {\n        \"lat\": 45.543645,\n        \"lon\":
+    -122.984178\n    },\n    \"sensors\": [{\n        \"address\": \"Jackson School
+    & Harewood\",\n        \"location\": {\n            \"lat\": 45.538991,\n            \"lon\":
+    -122.979685\n        },\n        \"algorithm\": \"object-detection\",\n        \"mnth\":
+    75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n
+    \       \"theta\": 90.0,\n        \"simsn\": \"cams1o3c0\",\n        \"simfile\":
+    \"_traffic.mp4$\"\n    },{\n        \"address\": \"Circle Park\",\n        \"location\":
+    {\n            \"lat\": 45.543897,\n            \"lon\": -122.970496\n        },\n
+    \       \"algorithm\": \"object-detection\",\n        \"mnth\": 75.0,\n        \"alpha\":
+    45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n        \"theta\": 315.0,\n
+    \       \"simsn\": \"cams1o3c1\",\n        \"simfile\": \"_traffic.mp4$\"\n    },{\n
+    \       \"address\": \"Evergreen & Jackson School\",\n        \"location\": {\n
+    \           \"lat\": 45.549972,\n            \"lon\": -122.979717\n        },\n
+    \       \"algorithm\": \"object-detection\",\n        \"mnth\": 75.0,\n        \"alpha\":
+    45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n        \"theta\": 270.0,\n
+    \       \"simsn\": \"cams1o3c2\",\n        \"simfile\": \"_traffic.mp4$\"\n    },{\n
+    \       \"address\": \"Glencoe & Evergreen\",\n        \"location\": {\n            \"lat\":
+    45.549807,\n            \"lon\": -122.995426\n        },\n        \"algorithm\":
+    \"object-detection\",\n        \"mnth\": 75.0,\n        \"alpha\": 45.0,\n        \"fovh\":
+    90.0,\n        \"fovv\": 68.0,\n        \"theta\": 0.0,\n        \"simsn\": \"cams1o3c3\",\n
+    \       \"simfile\": \"_traffic.mp4$\"\n    },{\n        \"address\": \"Glencoe
+    & Lenox St\",\n        \"location\": {\n            \"lat\": 45.544388,\n            \"lon\":
+    -122.995659\n        },\n        \"algorithm\": \"object-detection\",\n        \"mnth\":
+    75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n
+    \       \"theta\": 90.0,\n        \"simsn\": \"cams1o3c4\",\n        \"simfile\":
+    \"_traffic.mp4$\"\n    },{\n        \"address\": \"Glencoe & Harewood\",\n        \"location\":
+    {\n            \"lat\": 45.5355,\n            \"lon\": -122.9910\n        },\n
+    \       \"algorithm\": \"object-detection\",\n        \"mnth\": 75.0,\n        \"alpha\":
+    45.0,\n        \"fovh\": 90.0,\n        \"fovv\": 68.0,\n        \"theta\": 90.0,\n
+    \       \"simsn\": \"cams1o3c5\",\n        \"simfile\": \"_traffic.mp4$\"\n    },{\n
+    \       \"address\": \"Jackson School & Evergreen\",\n        \"location\": {\n
+    \           \"lat\": 45.5499,\n            \"lon\": -122.9734\n        },\n        \"algorithm\":
+    \"object-detection\",\n        \"mnth\": 75.0,\n        \"alpha\": 45.0,\n        \"fovh\":
+    90.0,\n        \"fovv\": 68.0,\n        \"theta\": 180.0,\n        \"simsn\":
+    \"cams1o3c6\",\n        \"simfile\": \"_traffic.mp4$\"\n    },{\n        \"address\":
+    \"Evergreen & 3rd Ave\",\n        \"location\": {\n            \"lat\": 45.5522,\n
+    \           \"lon\": -122.9882\n        },\n        \"algorithm\": \"object-detection\",\n
+    \       \"mnth\": 75.0,\n        \"alpha\": 45.0,\n        \"fovh\": 90.0,\n        \"fovv\":
+    68.0,\n        \"theta\": 0.0,\n        \"simsn\": \"cams1o3c7\",\n        \"simfile\":
+    \"_traffic.mp4$\"\n    }]\n},{\n    \"scenario\": \"stadium\",\n    \"address\":
+    \"National Stadium\",\n    \"location\": {\n        \"lat\": 37.39856,\n        \"lon\":
+    -121.94866\n    },\n    \"sensors\": [{\n        \"address\": \"East Gate\",\n
+    \       \"location\": {\n            \"lat\": 37.38813,\n            \"lon\":
+    -121.94370 \n        },\n        \"algorithm\": \"entrance-counting\",\n        \"theta\":
+    90.0,\n        \"simsn\": \"cams2o1e0\",\n        \"simfile\": \"_entrance.mp4$\"\n
+    \   },{\n        \"address\": \"North Gate\",\n        \"location\": {\n            \"lat\":
+    37.40008,\n            \"lon\": -121.95925\n        },\n        \"algorithm\":
+    \"entrance-counting\",\n        \"theta\": 180,\n        \"simsn\": \"cams2o1e1\",\n
+    \       \"simfile\": \"_entrance.mp4$\"\n    },{\n        \"address\": \"West
+    Gate\",\n        \"location\": {\n            \"lat\": 37.38679,\n            \"lon\":
+    -121.98048\n        },\n        \"algorithm\": \"entrance-counting\",\n        \"theta\":
+    270.0,\n        \"simsn\": \"cams2o1e2\",\n        \"simfile\": \"_entrance.mp4$\"\n
+    \   },{\n        \"address\": \"South Gate\",\n        \"location\": {\n            \"lat\":
+    37.37610,\n            \"lon\": -121.96242\n        },\n        \"algorithm\":
+    \"entrance-counting\",\n        \"theta\": 0.0,\n        \"simsn\": \"cams2o1e3\",\n
+    \       \"simfile\": \"_entrance.mp4$\"\n    },{\n        \"address\": \"South
+    East Exit\",\n        \"location\": {\n            \"lat\": 37.38062,\n            \"lon\":
+    -121.95048\n        },\n        \"algorithm\": \"entrance-counting\",\n        \"theta\":
+    45.0,\n        \"simsn\": \"cams2o1e4\",\n        \"simfile\": \"_entrance.mp4$\"\n
+    \   },{\n        \"address\": \"North East Exit\",\n        \"location\": {\n
+    \           \"lat\": 37.39628,\n            \"lon\": -121.95067\n        },\n
+    \       \"algorithm\": \"entrance-counting\",\n        \"theta\": 135.0,\n        \"simsn\":
+    \"cams2o1e5\",\n        \"simfile\": \"_entrance.mp4$\"\n    },{\n        \"address\":
+    \"North West Exit\",\n        \"location\": {\n            \"lat\": 37.39628,\n
+    \           \"lon\": -121.97461\n        },\n        \"algorithm\": \"entrance-counting\",\n
+    \       \"theta\": 225.0,\n        \"simsn\": \"cams2o1e6\",\n        \"simfile\":
+    \"_entrance.mp4$\"\n    },{\n        \"address\": \"South West Exit\",\n        \"location\":
+    {\n            \"lat\": 37.38077,\n            \"lon\": -121.97388\n        },\n
+    \       \"algorithm\": \"entrance-counting\",\n        \"theta\": 315.0,\n        \"simsn\":
+    \"cams2o1e7\",\n        \"simfile\": \"_entrance.mp4$\"\n    },{\n        \"address\":
+    \"East Wing\",\n        \"location\": {\n            \"lat\": 37.38865,\n            \"lon\":
+    -121.95405\n        },\n        \"algorithm\": \"crowd-counting\",\n        \"theta\":
+    270.0,\n        \"zones\": [0],\n        \"zonemap\": [{\n            \"zone\":
+    0,\n            \"polygon\": [[430,100],[1279,130],[1279,719],[0,719],[430,100]]\n
+    \       }],\n        \"simsn\": \"cams2o1w0\",\n        \"simfile\": \"_crowd.mp4$\"\n
+    \   },{\n        \"address\": \"North East Wing\",\n        \"location\": {\n
+    \           \"lat\": 37.39347,\n            \"lon\": -121.95452 \n        },\n
+    \       \"algorithm\": \"crowd-counting\",\n        \"theta\": 315.0,\n        \"zones\":
+    [1],\n        \"zonemap\": [{\n            \"zone\": 1,\n            \"polygon\":
+    [[430,100],[1279,130],[1279,719],[0,719],[430,100]]\n        }],\n        \"simsn\":
+    \"cams2o1w4\",\n        \"simfile\": \"_crowd.mp4$\"\n    },{\n        \"address\":
+    \"North Wing\",\n        \"location\": {\n            \"lat\": 37.39369,\n            \"lon\":
+    -121.96285\n        },\n        \"algorithm\": \"crowd-counting\",\n        \"theta\":
+    0.0,\n        \"zones\": [2],\n        \"zonemap\": [{\n            \"zone\":
+    2,\n            \"polygon\": [[430,100],[1279,130],[1279,719],[0,719],[430,100]]\n
+    \       }],\n        \"simsn\": \"cams2o1w1\",\n        \"simfile\": \"_crowd.mp4$\"\n
+    \   },{\n        \"address\": \"North West Wing\",\n        \"location\": {\n
+    \           \"lat\": 37.39365,\n            \"lon\": -121.97074\n        },\n
+    \       \"algorithm\": \"crowd-counting\",\n        \"theta\": 45.0,\n        \"zones\":
+    [3],\n        \"zonemap\": [{\n            \"zone\": 3,\n            \"polygon\":
+    [[430,100],[1279,130],[1279,719],[0,719],[430,100]]\n        }],\n        \"simsn\":
+    \"cams2o1w5\",\n        \"simfile\": \"_crowd.mp4$\"\n    },{\n        \"address\":
+    \"West Wing\",\n        \"location\": {\n            \"lat\": 37.38847,\n            \"lon\":
+    -121.97160\n        },\n        \"algorithm\": \"crowd-counting\",\n        \"theta\":
+    90.0,\n        \"zones\": [4],\n        \"zonemap\": [{\n            \"zone\":
+    4,\n            \"polygon\": [[430,100],[1279,130],[1279,719],[0,719],[430,100]]\n
+    \       }],\n        \"simsn\": \"cams2o1w2\",\n        \"simfile\": \"_crowd.mp4$\"\n
+    \   },{\n        \"address\": \"South West Wing\",\n        \"location\": {\n
+    \           \"lat\": 37.38351,\n            \"lon\": -121.97087\n        },\n
+    \       \"algorithm\": \"crowd-counting\",\n        \"theta\": 135.0,\n        \"zones\":
+    [5],\n        \"zonemap\": [{\n            \"zone\": 5,\n            \"polygon\":
+    [[430,100],[1279,130],[1279,719],[0,719],[430,100]]\n        }],\n        \"simsn\":
+    \"cams2o1w6\",\n        \"simfile\": \"_crowd.mp4$\"\n    },{\n        \"address\":
+    \"South Wing\",\n        \"location\": {\n            \"lat\": 37.38351,\n            \"lon\":
+    -121.96285\n        },\n        \"algorithm\": \"crowd-counting\",\n        \"theta\":
+    180.0,\n        \"zones\": [6],\n        \"zonemap\": [{\n            \"zone\":
+    6,\n            \"polygon\": [[430,100],[1279,130],[1279,719],[0,719],[430,100]]\n
+    \       }],\n        \"simsn\": \"cams2o1w3\",\n        \"simfile\": \"_crowd.mp4$\"\n
+    \   },{\n        \"address\": \"South East Wing\",\n        \"location\": {\n
+    \           \"lat\": 37.38369,\n            \"lon\": -121.95448\n        },\n
+    \       \"algorithm\": \"crowd-counting\",\n        \"theta\": 225.0,\n        \"zones\":
+    [7],\n        \"zonemap\": [{\n            \"zone\": 7,\n            \"polygon\":
+    [[430,100],[1279,130],[1279,719],[0,719],[430,100]]\n        }],\n        \"simsn\":
+    \"cams2o1w7\",\n        \"simfile\": \"_crowd.mp4$\"\n    },{\n        \"address\":
+    \"North West Restaurant\",\n        \"location\": {\n            \"lat\": 37.39821,\n
+    \           \"lon\": -121.96969\n        },\n        \"algorithm\": \"svcq-counting\",\n
+    \       \"theta\": 0.0,\n        \"simsn\": \"cams2o1q0\",\n        \"simfile\":
+    \"_svcq.mp4$\"\n    },{\n        \"address\": \"North East Restaurant\",\n        \"location\":
+    {\n            \"lat\": 37.39804,\n            \"lon\": -121.95195\n        },\n
+    \       \"algorithm\": \"svcq-counting\",\n        \"theta\": 0.0,\n        \"simsn\":
+    \"cams2o1q1\",\n        \"simfile\": \"_svcq.mp4$\"\n    },{\n        \"address\":
+    \"East Restaurant\",\n        \"location\": {\n            \"lat\": 37.39245,\n
+    \           \"lon\": -121.94811\n        },\n        \"algorithm\": \"svcq-counting\",\n
+    \       \"theta\": 270.0,\n        \"simsn\": \"cams2o1q2\",\n        \"simfile\":
+    \"_svcq.mp4$\"\n    },{\n        \"address\": \"South Restaurant\",\n        \"location\":
+    {\n            \"lat\": 37.37813,\n            \"lon\": -121.96965\n        },\n
+    \       \"algorithm\": \"svcq-counting\",\n        \"theta\": 180.0,\n        \"simsn\":
+    \"cams2o1q3\",\n        \"simfile\": \"_svcq.mp4$\"\n    },{\n        \"address\":
+    \"West Restaurant\",\n        \"location\": {\n            \"lat\": 37.38134,\n
+    \           \"lon\": -121.97670\n        },\n        \"algorithm\": \"svcq-counting\",\n
+    \       \"theta\": 90.0,\n        \"simsn\": \"cams2o1q4\",\n        \"simfile\":
+    \"_svcq.mp4$\"\n    },{\n        \"address\": \"West Telephone Booth\",\n        \"location\":
+    {\n            \"lat\": 37.39528,\n            \"lon\": -121.94820\n        },\n
+    \       \"algorithm\": \"svcq-counting\",\n        \"theta\": 270.0,\n        \"simsn\":
+    \"cams2o1q5\",\n        \"simfile\": \"_svcq.mp4$\"\n    },{\n        \"address\":
+    \"South Telephone Booth\",\n        \"location\": {\n            \"lat\": 37.37800,\n
+    \           \"lon\": -121.95116\n        },\n        \"algorithm\": \"svcq-counting\",\n
+    \       \"theta\": 180.0,\n        \"simsn\": \"cams2o1q6\",\n        \"simfile\":
+    \"_svcq.mp4$\"\n    },{\n        \"address\": \"West Elevator\",\n        \"location\":
+    {\n            \"lat\": 37.39124,\n            \"lon\": -121.97741\n        },\n
+    \       \"algorithm\": \"svcq-counting\",\n        \"theta\": 90.0,\n        \"simsn\":
+    \"cams2o1q7\",\n        \"simfile\": \"_svcq.mp4$\"\n    }]\n}]\n"
+kind: ConfigMap
+metadata:
+  name: sensor-info
