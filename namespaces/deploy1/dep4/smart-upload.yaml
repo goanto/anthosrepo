@@ -1,0 +1,77 @@
+
+
+
+
+
+
+
+
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traffic-office1-smart-upload
+  labels:
+     app: traffic-office1-smart-upload
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traffic-office1-smart-upload
+  template:
+    metadata:
+      labels:
+        app: traffic-office1-smart-upload
+    spec:
+      enableServiceLinks: false
+      containers:
+        - name: traffic-office1-smart-upload
+          image: goanto/smtc_smart_upload:latest
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+                cpu: "50m"
+          env:
+            - name: QUERY
+              value: "objects.detection.bounding_box.x_max-objects.detection.bounding_box.x_min>0.1"
+            - name: OFFICE
+              value: "45.539626,-122.929569"
+            - name: DBHOST
+              value: "http://db-service:9200"
+            - name: DBCHOST
+              value: "http://cloud-gateway-service:8080/cloud/api/db"
+            - name: STHOST
+              value: "http://traffic-office1-storage-service:8080/recording"
+            - name: STCHOST
+              value: "http://cloud-gateway-service:8080/cloud/api/upload"
+            - name: SERVICE_INTERVAL
+              value: "30"
+            - name: NO_PROXY
+              value: "*"
+            - name: no_proxy
+              value: "*"
+          volumeMounts:
+            - mountPath: /etc/localtime
+              name: timezone
+              readOnly: true
+      volumes:
+          - name: timezone
+            hostPath:
+                path: /etc/localtime
+                type: File
+      affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+                - matchExpressions:
+                  - key: "vcac-zone"
+                    operator: NotIn
+                    values:
+                      - "yes"
+
+---
+
+
+
+

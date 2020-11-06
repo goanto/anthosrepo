@@ -1,0 +1,94 @@
+
+
+
+
+
+
+
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: traffic-office1-storage-service
+  labels:
+    app: traffic-office1-storage
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+  selector:
+    app: traffic-office1-storage
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traffic-office1-storage
+  labels:
+     app: traffic-office1-storage
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traffic-office1-storage
+  template:
+    metadata:
+      labels:
+        app: traffic-office1-storage
+    spec:
+      enableServiceLinks: false
+      containers:
+        - name: traffic-office1-storage
+          image: goanto/smtc_storage_manager:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: OFFICE
+              value: "45.539626,-122.929569"
+            - name: DBHOST
+              value: "http://db-service:9200"
+            - name: INDEXES
+              value: "recordings,analytics"
+            - name: RETENTION_TIME
+              value: "3600"
+            - name: SERVICE_INTERVAL
+              value: "1800"
+            - name: WARN_DISK
+              value: "75"
+            - name: FATAL_DISK
+              value: "85"
+            - name: HALT_REC
+              value: "95"
+            - name: THUMBNAIL_CACHE
+              value: "50"
+            - name: NO_PROXY
+              value: "*"
+            - name: no_proxy
+              value: "*"
+          volumeMounts:
+            - mountPath: /etc/localtime
+              name: timezone
+              readOnly: true
+      volumes:
+        - name: timezone
+          hostPath:
+            path: /etc/localtime
+            type: File
+      affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+                - matchExpressions:
+                  - key: "vcac-zone"
+                    operator: NotIn
+                    values:
+                      - "yes"
+
+---
+
+
+
+
