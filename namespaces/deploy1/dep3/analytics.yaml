@@ -1,0 +1,91 @@
+
+
+
+
+
+
+
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traffic-office1-analytics-traffic
+  labels:
+     app: traffic-office1-analytics-traffic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traffic-office1-analytics-traffic
+  template:
+    metadata:
+      labels:
+        app: traffic-office1-analytics-traffic
+    spec:
+      enableServiceLinks: false
+      containers:
+        - name: traffic-office1-analytics-traffic
+          image: goanto/smtc_analytics_object_xeon_gst:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: OFFICE
+              value: "45.539626,-122.929569"
+            - name: DBHOST
+              value: "http://db-service:9200"
+            - name: MQTTHOST
+              value: "traffic-office1-mqtt-service"
+            - name: STHOST
+              value: "http://traffic-office1-storage-service:8080/api/upload"
+            - name: EVERY_NTH_FRAME
+              value: "6"
+            - name: SCENARIO
+              value: "traffic"
+            - name: NETWORK_PREFERENCE
+              value: "{\"CPU\":\"INT8,FP32\"}"
+            - name: GST_DEBUG
+              value: "3"
+            - name: NO_PROXY
+              value: "*"
+            - name: no_proxy
+              value: "*"
+          volumeMounts:
+            - mountPath: /etc/localtime
+              name: timezone
+              readOnly: true
+            - mountPath: /tmp/rec
+              name: recording
+      initContainers:
+            - image: busybox:latest
+              imagePullPolicy: IfNotPresent
+              name: init
+              command: ["/bin/chown","0:0","/tmp/rec"]
+              volumeMounts:
+                - mountPath: /tmp/rec
+                  name: recording
+      volumes:
+          - name: timezone
+            hostPath:
+              path: /etc/localtime
+              type: File
+          - name: recording
+            emptyDir:
+              medium: Memory
+              sizeLimit: 150Mi
+      affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+                - matchExpressions:
+                  - key: "vcac-zone"
+                    operator: NotIn
+                    values:
+                      - "yes"
+
+
+
+---
+
+
+
+

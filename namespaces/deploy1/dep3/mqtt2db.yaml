@@ -1,0 +1,67 @@
+
+
+
+
+
+
+
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traffic-office1-mqtt2db
+  labels:
+     app: traffic-office1-mqtt2db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traffic-office1-mqtt2db
+  template:
+    metadata:
+      labels:
+        app: traffic-office1-mqtt2db
+    spec:
+      enableServiceLinks: false
+      containers:
+        - name: traffic-office1-mqtt2db
+          image: goanto/smtc_mqtt2db:latest
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: OFFICE
+              value: "45.539626,-122.929569"
+            - name: DBHOST
+              value: "http://db-service:9200"
+            - name: MQTTHOST
+              value: "traffic-office1-mqtt-service"
+            - name: SCENARIO
+              value: "traffic"
+            - name: NO_PROXY
+              value: "*"
+            - name: no_proxy
+              value: "*"
+          volumeMounts:
+            - mountPath: /etc/localtime
+              name: timezone
+              readOnly: true
+      volumes:
+          - name: timezone
+            hostPath:
+                path: /etc/localtime
+                type: File
+      affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+                - matchExpressions:
+                  - key: "vcac-zone"
+                    operator: NotIn
+                    values:
+                      - "yes"
+
+---
+
+
+
+

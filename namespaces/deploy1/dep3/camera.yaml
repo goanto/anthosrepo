@@ -1,0 +1,102 @@
+
+
+
+
+
+
+
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: traffic-office1-cameras-service
+  labels:
+    app: traffic-office1-cameras
+spec:
+  ports:
+  - port: 17000
+    protocol: TCP
+    name: rtsp1
+  - port: 17010
+    protocol: TCP
+    name: rtsp2
+  - port: 17020
+    protocol: TCP
+    name: rtsp3
+  - port: 17030
+    protocol: TCP
+    name: rtsp4
+  - port: 17040
+    protocol: TCP
+    name: rtsp5
+  selector:
+    app: traffic-office1-cameras
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traffic-office1-cameras
+  labels:
+     app: traffic-office1-cameras
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traffic-office1-cameras
+  template:
+    metadata:
+      labels:
+        app: traffic-office1-cameras
+    spec:
+      enableServiceLinks: false
+      containers:
+        - name: traffic-office1-cameras
+          image: goanto/smtc_sensor_simulation:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 17000
+              protocol: TCP
+            - containerPort: 17010
+              protocol: TCP
+            - containerPort: 17020
+              protocol: TCP
+            - containerPort: 17030
+              protocol: TCP
+            - containerPort: 17040
+              protocol: TCP
+          env:
+            - name: FILES
+              value: "_traffic.mp4$$"
+            - name: ALGORITHM
+              value: "object-detection"
+            - name: OFFICE
+              value: "45.539626,-122.929569"
+            - name: DBHOST
+              value: "http://db-service:9200"
+            - name: NCAMERAS
+              value: "5"
+            - name: RTSP_PORT
+              value: "17000"
+            - name: RTP_PORT
+              value: "27000"
+            - name: PORT_STEP
+              value: "10"
+      affinity:
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+                - matchExpressions:
+                  - key: "vcac-zone"
+                    operator: NotIn
+                    values:
+                      - "yes"
+
+
+---
+
+
+
+
